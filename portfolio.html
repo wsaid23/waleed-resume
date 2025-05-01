@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Waleed Said</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Portfolio</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="employment.html">Employment</a>
+        <a href="skills.html">Skills</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Cassette Website Project</h2>
+      <p>This gallery showcases a 5-page HTML website I created to promote my family's cassette music collection page on Instagram. It features retro design elements and hand-coded structure using only HTML and CSS.</p>
+      <p>Visit the website at <a href="https://mason.gmu.edu/~wsaid2/index.html">Tezes Tapes Website</a>.</p>
+
+
+      <div class="gallery">
+        <img src="page1.png" alt="Home Page Screenshot" onclick="openLightbox(this.src)">
+        <img src="page2.png" alt="Tracks of the Week Screenshot" onclick="openLightbox(this.src)">
+        <img src="page3.png" alt="Archive Page Screenshot" onclick="openLightbox(this.src)">
+        <img src="page4.png" alt="Mixes Page Screenshot" onclick="openLightbox(this.src)">
+        <img src="page5.png" alt="Contact Us Screenshot" onclick="openLightbox(this.src)">
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Expanded Screenshot">
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Waleed Said. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox").style.display = "block";
+      document.getElementById("lightbox-img").src = src;
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") closeLightbox();
+    });
+  </script>
+</body>
+</html>
